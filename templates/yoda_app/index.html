@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+
+<html>
+
+    <head>
+        <title>Yoda</title>
+    </head>
+
+    <body>
+        <h1>Yoda says...hello world!</h1>
+
+        {% if categories %}
+            <ul>
+                {% for category in categories %}
+                <li><a href="/yoda_app/category/{{ category.slug }}">{{ category.name }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There are no categories present.</strong>
+        {% endif %}
+
+        <a href="/yoda_app/about/">About</a>
+        <a href="/yoda_app/add_category/">Add a New Category</a><br />
+    </body>
+
+</html>
